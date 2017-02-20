@@ -1,7 +1,7 @@
 {
-  "name": "po_yaqm",
+  "name": "po_yarqm",
   "version": "1.0.0",
-  "description": "Yet Another Quote Machine (FCC)",
+  "description": "Yet Another Random Quote Machine (FCC)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
