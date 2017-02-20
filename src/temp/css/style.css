@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|Roboto|Sansita");
+/*
+ * Colors
+ */
+* {
+  box-sizing: border box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #009688;
+  font-family: "Open Sans";
+}
+
+.card {
+  border-radius: 3px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  max-width: 30rem;
+  min-height: 30%;
+}
+
+.card--header {
+  display: block;
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  color: #009688;
+}
+
+.card--main-content {
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 1rem;
+  width: 100%;
+  min-height: 60%;
+}
+
+.card--main-content > blockquote {
+  font-family: "Playfair Display";
+  font-size: 2rem;
+  line-height: 1;
+  color: #009688;
+  font-weight: 600;
+}
+
+.card--controls {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button {
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  padding: .5rem;
+  height: 2.25rem;
+  margin: 0;
+  cursor: pointer;
+  color: #fff;
+  background-color: #009688;
+}
+
+.button:hover, .button:focus {
+  opacity: .75;
+  outline: none;
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|Roboto|Sansita');
+
+$body-font: "Open Sans";
+$quote-font: "Playfair Display";
+
+$box-radius: 3px !default;
+// $box-shadow: 0 0 1.25rem .125rem rgba(0,0,0, .4) !default;
+$box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+$box-padding: 1rem !default;
+$card-width: 20rem;
+
+/*
+ * Colors
+ */
+
+$pink: #e91e63 !default;
+$red: #f44336 !default;
+$deep-orange: #ff5722 !default;
+$orange: #ff9800 !default;
+$amber: #ffc107 !default;
+// $yellow: #ffeb3b !default;
+// $lime: #cddc39 !default;
+$light-green: #8bc34a !default;
+$green: #4CAF50 !default;
+$teal: #009688 !default;
+$cyan: #00bcd4 !default;
+$light-blue: #03a9f4 !default;
+$blue: #2196f3 !default;
+$indigo: #3f51b5 !default;
+$deep-purple: #673ab7 !default;
+$purple: #9c27b0 !default;
+
+$brown: #795548 !default;
+
+$white: #fff !default;
+$black: #000 !default;
+$dark-grey: #424242 !default;
+$grey: #9e9e9e !default;
+
+$primary: $teal;
+
+* {
+  box-sizing: border box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $primary;
+  font-family: $body-font;
+}
+
+.card {
+   border-radius: $box-radius;
+   box-shadow: $box-shadow;
+   background-color: $white;
+   padding: $box-padding * 2;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-between;
+   align-items: center;
+   position: absolute;
+   top: 50%;
+   right: 50%;
+   transform: translate(50%, -50%);
+  //  min-width: $card-width + ($box-padding);
+   max-width: 30rem;
+   min-height: 30%;
+
+   &--header {
+     display: block;
+     position: relative;
+     top: 0;
+     width: 100%;
+     padding: $box-padding;
+     color: $primary;
+   }
+
+   &--main-content {
+     display: block;
+     flex: 1 1 auto;
+     padding: $box-padding;
+     width: 100%;
+     min-height: 60%;
+
+     & > blockquote {
+       font-family: $quote-font;
+       font-size: 2rem;
+       line-height: 1;
+       color: $primary;
+       font-weight: 600;
+     }
+   }
+
+   &--controls {
+     flex: 0 1 auto;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+   }
+
+}
+
+.button {
+  // flex: 0 1 auto;
+  border: none;
+  // border-bottom: solid 2px rgba(0,0,0, .4);
+  border-radius: $box-radius;
+  box-shadow: $box-shadow;
+  padding: .5rem;
+  height: 2.25rem;
+  margin: 0;
+  cursor: pointer;
+  color: $white;
+  background-color: $primary;
+
+  &:hover,
+  &:focus {
+    opacity: .75;
+    outline: none;
+  }
+}

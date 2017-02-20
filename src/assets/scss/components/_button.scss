@@ -1,0 +1,18 @@
+.button {
+   @include flex-parent(space-around, center);
+   border: none;
+   border-bottom: solid 2px rgba(0,0,0, .4);
+   border-radius: $box-radius;
+   box-shadow: $box-shadow;
+   // padding: 1rem;
+   // margin-top: .5rem;
+
+   // &-group {
+   //    @include flex-parent(flex-end, center);
+   //    width: 100%;
+   // }
+
+   &:hover {
+
+   }
+}

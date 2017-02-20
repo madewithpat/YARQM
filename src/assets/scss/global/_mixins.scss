@@ -1,0 +1,9 @@
+
+@mixin flex-parent($align, $justify, $direction: row, $wrap: nowrap) {
+  display: flex;
+  // Cross Axis alignment, default is stretch **center is NOT an option**
+  align-items: $align;
+  // Main axis alignment, default is flex-start **stretch is NOT an option**
+  justify-content: $justify;
+  flex-flow: $direction $wrap;
+}

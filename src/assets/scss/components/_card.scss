@@ -1,0 +1,20 @@
+.card {
+   @include flex-parent(center, center, column);
+   border-radius: $box-radius;
+   box-shadow: $box-shadow;
+   background-color: $white;
+   position: absolute;
+   padding: $box-padding;
+   // top: 50%;
+   // right: 50%;
+   // transform: translate(50%, -50%);
+   // min-width: 25%;
+   // min-height: 25%;
+
+   & .main-content {
+      display: flex;
+      flex: 1 1 75%;
+      // width: 100%;
+   }
+
+}
