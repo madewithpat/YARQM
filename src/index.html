@@ -6,13 +6,15 @@
    <link rel="stylesheet" href="temp/css/style.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<body>
+<body data-color-sync="background">
    <main class="card">
-      <div class="card--main-content" id="quote">
+      <div class="card--main-content">
+         <blockquote id="quote" data-color-sync="color">
+         </blockquote>
       </div>
       <div class="card--controls">
-         <button class="button" id="tweetButton">Tweet</button>
-         <button class="button" id="newQuoteButton">New Quote</button>
+         <button class="button" id="tweetButton" data-color-sync="background">Tweet</button>
+         <button class="button" id="newQuoteButton" data-color-sync="background">New Quote</button>
       </div>    
    </main>
    <script src="temp/js/App.js"></script>

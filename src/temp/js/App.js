@@ -71,6 +71,8 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
 // let jokeId;
 // let xhr = new XMLHttpRequest();
 
@@ -138,18 +140,12 @@
 // $.get(url, data, callback);
 
 
-
 function newQuote() {
-    // const apiURL = "http://api.forismatic.com/api/1.0/";
     var apiURL = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
-    // const query = {
-    //     method: "getQuote",
-    //     format: "json",
-    //     lang: "en"
-    // };
 
+    // Animate this, either using .animate with opacity, or using fadeIn/fadeOut
     function quoteUpdate(data) {
-        var html = "<blockquote>" + data + "</blockquote>";
+        var html = "" + data;
         $("#quote").html(html);
     };
 
@@ -160,13 +156,30 @@ function newQuote() {
 
     $.ajax({
         url: apiURL,
-        // data: query,
         dataType: "json",
         type: "GET",
         crossDomain: true,
         success: quoteUpdate,
         error: quoteError
     });
+};
+
+// Add colorShift() to the click handler,
+function colorShift() {
+    var colors = ["#e91e63", "#f44ee6", "#ff5722", "#ff9800", "#ffc107", "#8bc34a", "#4caf50", "#009688", "#00bcd4", "#03a9f4", "#2196f3", "#3f51b5", "#673ab7", "#9c27b0", "#795548", "424242"];
+
+    var newColor = getRandomValue(colors);
+
+    // Adjust this function with .animate()
+    $("attr[data-color-sync]").each(function () {
+        var syncProp = $(this).data("colorSync");
+        $(this).css(syncProp, newColor);
+    });
+
+    function getRandomValue(arr) {
+        var rand = Math.floor(Math.random() * arr.length);
+        return arr[rand];
+    };
 };
 
 $(document).ready(newQuote);
